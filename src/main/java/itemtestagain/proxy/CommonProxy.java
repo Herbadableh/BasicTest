@@ -9,9 +9,4 @@ public class CommonProxy {
 
     public void preInit() {
     }
-/*
-    public Map<Item, ModelBiped> getExampleArmor() {
-        return null;
-    }
- */
 }

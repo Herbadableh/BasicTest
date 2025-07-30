@@ -1,17 +1,12 @@
 package itemtestagain.item;
 
-//import net.minecraft.client.model.ModelBiped;
 import net.minecraft.creativetab.CreativeTabs;
-//import net.minecraft.entity.EntityLivingBase;
-//import net.minecraft.entity.item.EntityArmorStand;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-//import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import itemtestagain.BasicTest;
-//import itemtestagain.models.ModelExampleArmor;
+
 
 public class ItemExample extends Item {
 
@@ -20,36 +15,4 @@ public class ItemExample extends Item {
         setTranslationKey(name);
         setCreativeTab(CreativeTabs.COMBAT);
     }
-/*
-    @Override
-    @SideOnly(Side.CLIENT)
-    public ModelBiped getArmorModel(EntityLivingBase entity, ItemStack stack, EntityEquipmentSlot slot, ModelBiped def) {
-        if(!stack.isEmpty() && stack.getItem() instanceof ItemArmor) {
-            ModelExampleArmor armorModel = (ModelExampleArmor)BasicTest.PROXY.getExampleArmor().get(this);
-            if(armorModel != null) {
-                armorModel.bipedHead.showModel = slot == EntityEquipmentSlot.HEAD;
-                armorModel.bipedHeadwear.showModel = slot == EntityEquipmentSlot.HEAD;
-                armorModel.bipedBody.showModel = slot == EntityEquipmentSlot.CHEST;
-                armorModel.bipedRightArm.showModel = slot == EntityEquipmentSlot.CHEST;
-                armorModel.bipedLeftArm.showModel = slot == EntityEquipmentSlot.CHEST;
-                armorModel.LeftLeg.showModel = slot == EntityEquipmentSlot.LEGS;
-                armorModel.RightLeg.showModel = slot == EntityEquipmentSlot.LEGS;
-                armorModel.LeftFoot.showModel = slot == EntityEquipmentSlot.FEET;
-                armorModel.RightFoot.showModel = slot == EntityEquipmentSlot.FEET;
-
-                armorModel.isSneak = def.isSneak;
-                armorModel.isRiding = def.isRiding;
-                armorModel.isChild = def.isChild;
-
-                if(entity instanceof EntityArmorStand) armorModel.swingProgress = 0;
-
-                armorModel.rightArmPose = def.rightArmPose;
-                armorModel.leftArmPose = def.leftArmPose;
-
-                return armorModel;
-            }
-        }
-        return null;
-    }
-    */
 }

@@ -3,7 +3,6 @@ package itemtestagain.proxy;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.item.Item;
 import itemtestagain.handlers.ModRegistry;
-import itemtestagain.models.ModelExampleArmor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,17 +16,5 @@ public class ClientProxy extends CommonProxy {
 */
     @Override
     public void preInit() {
-        /*
-        exampleArmorModels.put(ModRegistry.exampleHelmet, exampleArmor);
-        exampleArmorModels.put(ModRegistry.exampleChestplate, exampleArmor);
-        exampleArmorModels.put(ModRegistry.exampleLeggings, exampleArmorLegs);
-        exampleArmorModels.put(ModRegistry.exampleBoots, exampleArmor);
-         */
     }
-/*
-    @Override
-    public Map<Item, ModelBiped> getExampleArmor() {
-        return exampleArmorModels;
-    }
- */
 }
