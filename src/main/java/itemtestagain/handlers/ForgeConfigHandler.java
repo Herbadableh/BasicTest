@@ -1,13 +1,13 @@
-package replacememodid.handlers;
+package itemtestagain.handlers;
 
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import replacememodid.ReplaceMeModName;
+import itemtestagain.BasicTest;
 
-@Config(modid = ReplaceMeModName.MODID)
+@Config(modid = BasicTest.MODID)
 public class ForgeConfigHandler {
 	
 	@Config.Comment("Server-Side Options")
@@ -32,13 +32,13 @@ public class ForgeConfigHandler {
 		public boolean exampleClientOption = true;
 	}
 
-	@Mod.EventBusSubscriber(modid = ReplaceMeModName.MODID)
+	@Mod.EventBusSubscriber(modid = BasicTest.MODID)
 	private static class EventHandler{
 
 		@SubscribeEvent
 		public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-			if(event.getModID().equals(ReplaceMeModName.MODID)) {
-				ConfigManager.sync(ReplaceMeModName.MODID, Config.Type.INSTANCE);
+			if(event.getModID().equals(BasicTest.MODID)) {
+				ConfigManager.sync(BasicTest.MODID, Config.Type.INSTANCE);
 			}
 		}
 	}

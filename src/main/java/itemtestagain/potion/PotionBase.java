@@ -1,4 +1,4 @@
-package replacememodid.potion;
+package itemtestagain.potion;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -7,7 +7,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import replacememodid.ReplaceMeModName;
+import itemtestagain.BasicTest;
 
 public abstract class PotionBase extends Potion {
 
@@ -15,9 +15,9 @@ public abstract class PotionBase extends Potion {
 
     public PotionBase(String name, boolean isBadEffect, int liquidColor) {
         super(isBadEffect,liquidColor);
-        this.texture = new ResourceLocation(ReplaceMeModName.MODID, "textures/effects/" + name + ".png");
-        this.setRegistryName(ReplaceMeModName.MODID, name);
-        this.setPotionName("effects." + ReplaceMeModName.MODID + "." + name);
+        this.texture = new ResourceLocation(BasicTest.MODID, "textures/effects/" + name + ".png");
+        this.setRegistryName(BasicTest.MODID, name);
+        this.setPotionName("effects." + BasicTest.MODID + "." + name);
     }
 
     public ResourceLocation getTexture() { return this.texture; }

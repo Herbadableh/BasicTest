@@ -1,4 +1,4 @@
-package replacememodid.models;
+package itemtestagain.models;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;

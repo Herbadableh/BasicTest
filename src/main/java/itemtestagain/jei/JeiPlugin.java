@@ -1,4 +1,4 @@
-package replacememodid.jei;
+package itemtestagain.jei;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;

@@ -1,4 +1,4 @@
-package replacememodid.recipe;
+package itemtestagain.recipe;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

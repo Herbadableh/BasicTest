@@ -1,9 +1,9 @@
-package replacememodid.proxy;
+package itemtestagain.proxy;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.item.Item;
-import replacememodid.handlers.ModRegistry;
-import replacememodid.models.ModelExampleArmor;
+import itemtestagain.handlers.ModRegistry;
+import itemtestagain.models.ModelExampleArmor;
 
 import java.util.HashMap;
 import java.util.Map;

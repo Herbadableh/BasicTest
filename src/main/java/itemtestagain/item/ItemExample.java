@@ -1,4 +1,4 @@
-package replacememodid.item;
+package itemtestagain.item;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.creativetab.CreativeTabs;
@@ -9,14 +9,14 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import replacememodid.ReplaceMeModName;
-import replacememodid.models.ModelExampleArmor;
+import itemtestagain.BasicTest;
+import itemtestagain.models.ModelExampleArmor;
 
-public class ItemExampleArmor extends ItemArmor {
+public class ItemExample extends ItemArmor {
 
-    public ItemExampleArmor(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+    public ItemExample(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
-        this.setRegistryName(ReplaceMeModName.MODID, name);
+        this.setRegistryName(BasicTest.MODID, name);
         this.setTranslationKey(name);
         this.setCreativeTab(CreativeTabs.COMBAT);
     }
@@ -25,7 +25,7 @@ public class ItemExampleArmor extends ItemArmor {
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase entity, ItemStack stack, EntityEquipmentSlot slot, ModelBiped def) {
         if(!stack.isEmpty() && stack.getItem() instanceof ItemArmor) {
-            ModelExampleArmor armorModel = (ModelExampleArmor)ReplaceMeModName.PROXY.getExampleArmor().get(this);
+            ModelExampleArmor armorModel = (ModelExampleArmor)BasicTest.PROXY.getExampleArmor().get(this);
             if(armorModel != null) {
                 armorModel.bipedHead.showModel = slot == EntityEquipmentSlot.HEAD;
                 armorModel.bipedHeadwear.showModel = slot == EntityEquipmentSlot.HEAD;

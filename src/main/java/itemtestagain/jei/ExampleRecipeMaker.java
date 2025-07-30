@@ -1,4 +1,4 @@
-package replacememodid.jei;
+package itemtestagain.jei;
 
 import java.util.ArrayList;
 import java.util.List;

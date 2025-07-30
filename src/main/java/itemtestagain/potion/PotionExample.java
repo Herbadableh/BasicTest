@@ -1,4 +1,4 @@
-package replacememodid.potion;
+package itemtestagain.potion;
 
 import net.minecraft.entity.EntityLivingBase;
 

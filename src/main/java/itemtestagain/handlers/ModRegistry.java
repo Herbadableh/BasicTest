@@ -1,4 +1,4 @@
-package replacememodid.handlers;
+package itemtestagain.handlers;
 
 import net.minecraft.init.Items;
 import net.minecraft.init.PotionTypes;
@@ -16,22 +16,22 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import replacememodid.ReplaceMeModName;
-import replacememodid.item.ItemExampleArmor;
-import replacememodid.potion.PotionExample;
-import replacememodid.recipe.RecipeExample;
+import itemtestagain.BasicTest;
+import itemtestagain.item.ItemExample;
+import itemtestagain.potion.PotionExample;
+import itemtestagain.recipe.RecipeExample;
 
-@Mod.EventBusSubscriber(modid = ReplaceMeModName.MODID)
+@Mod.EventBusSubscriber(modid = BasicTest.MODID)
 public class ModRegistry {
 
-        public static ItemArmor.ArmorMaterial EXAMPLE_ARMOR = EnumHelper.addArmorMaterial("example_armor", ReplaceMeModName.MODID + ":example_armor", 26, new int[]{2,4,6,2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+        public static ItemArmor.ArmorMaterial EXAMPLE_ARMOR = EnumHelper.addArmorMaterial("example_armor", BasicTest.MODID + ":example_armor", 26, new int[]{2,4,6,2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
-        public static Item exampleHelmet = new ItemExampleArmor("example_helmet", EXAMPLE_ARMOR, 2, EntityEquipmentSlot.HEAD);
-        public static Item exampleChestplate = new ItemExampleArmor("example_chestplate", EXAMPLE_ARMOR, 1, EntityEquipmentSlot.CHEST);
-        public static Item exampleLeggings = new ItemExampleArmor("example_leggings", EXAMPLE_ARMOR, 2, EntityEquipmentSlot.LEGS);
-        public static Item exampleBoots = new ItemExampleArmor("example_boots", EXAMPLE_ARMOR, 1, EntityEquipmentSlot.FEET);
+        public static Item exampleHelmet = new ItemExample("example_helmet", EXAMPLE_ARMOR, 2, EntityEquipmentSlot.HEAD);
+        public static Item exampleChestplate = new ItemExample("example_chestplate", EXAMPLE_ARMOR, 1, EntityEquipmentSlot.CHEST);
+        public static Item exampleLeggings = new ItemExample("example_leggings", EXAMPLE_ARMOR, 2, EntityEquipmentSlot.LEGS);
+        public static Item exampleBoots = new ItemExample("example_boots", EXAMPLE_ARMOR, 1, EntityEquipmentSlot.FEET);
 
-        public static PotionType examplePotion = new PotionType("example", new PotionEffect(PotionExample.INSTANCE)).setRegistryName(new ResourceLocation(ReplaceMeModName.MODID, "example"));
+        public static PotionType examplePotion = new PotionType("example", new PotionEffect(PotionExample.INSTANCE)).setRegistryName(new ResourceLocation(BasicTest.MODID, "example"));
 
         public static void init() {
 
@@ -49,7 +49,7 @@ public class ModRegistry {
 
         @SubscribeEvent
         public static void registerRecipeEvent(RegistryEvent.Register<IRecipe> event) {
-                event.getRegistry().register(new RecipeExample().setRegistryName(new ResourceLocation(ReplaceMeModName.MODID, "example")));
+                event.getRegistry().register(new RecipeExample().setRegistryName(new ResourceLocation(BasicTest.MODID, "example")));
         }
 
         @SubscribeEvent

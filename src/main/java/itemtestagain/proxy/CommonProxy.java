@@ -1,4 +1,4 @@
-package replacememodid.proxy;
+package itemtestagain.proxy;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.item.Item;
