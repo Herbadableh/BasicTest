@@ -11,7 +11,7 @@ import itemtestagain.BasicTest;
 
 @Mod.EventBusSubscriber(modid = BasicTest.MODID, value = Side.CLIENT)
 public class ClientModRegistry {
-
+/*
     @SubscribeEvent
     public static void modelRegisterEvent(ModelRegistryEvent event) {
         registerModels(ModRegistry.exampleHelmet, ModRegistry.exampleChestplate, ModRegistry.exampleLeggings, ModRegistry.exampleBoots);
@@ -22,4 +22,5 @@ public class ClientModRegistry {
             ModelLoader.setCustomModelResourceLocation(entry, 0, new ModelResourceLocation(entry.getRegistryName(), "inventory"));
         }
     }
+ */
 }

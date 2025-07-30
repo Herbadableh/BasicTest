@@ -1,26 +1,26 @@
 package itemtestagain.item;
 
-import net.minecraft.client.model.ModelBiped;
+//import net.minecraft.client.model.ModelBiped;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityArmorStand;
+//import net.minecraft.entity.EntityLivingBase;
+//import net.minecraft.entity.item.EntityArmorStand;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.item.Item;
+//import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import itemtestagain.BasicTest;
-import itemtestagain.models.ModelExampleArmor;
+//import itemtestagain.models.ModelExampleArmor;
 
-public class ItemExample extends ItemArmor {
+public class ItemExample extends Item {
 
-    public ItemExample(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-        super(materialIn, renderIndexIn, equipmentSlotIn);
-        this.setRegistryName(BasicTest.MODID, name);
-        this.setTranslationKey(name);
-        this.setCreativeTab(CreativeTabs.COMBAT);
+    public ItemExample(String name) {
+        setRegistryName(BasicTest.MODID, name);
+        setTranslationKey(name);
+        setCreativeTab(CreativeTabs.COMBAT);
     }
-
+/*
     @Override
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase entity, ItemStack stack, EntityEquipmentSlot slot, ModelBiped def) {
@@ -51,4 +51,5 @@ public class ItemExample extends ItemArmor {
         }
         return null;
     }
+    */
 }
