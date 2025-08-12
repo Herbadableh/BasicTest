@@ -42,6 +42,9 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 	
     implementation fg.deobf("curse.maven:jei-${jei_version}")
+    implementation fg.deobf("curse.maven:clockwork-phase-227388:3016789")
+    //incase you don't know where to look, the maven link for curseforge can be found in the mod's specific file page,
+    //under "Curse Maven Snippet".
 }
 
 processResources {
