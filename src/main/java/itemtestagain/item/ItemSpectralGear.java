@@ -18,7 +18,7 @@ import java.util.List;
 //you might ask "hey, why not use the ItemBaseComponentGeneric class instead of making your own item class?
 //because the base item class is sloppy. like, why set a max damage to EVERY ITEM IN YOUR MOD?
 //anyway, I'll probably scrap this at some point and redo it. Again.
-public class ItemGeneric extends Item implements IBaseComponent {
+public class ItemSpectralGear extends Item implements IBaseComponent {
 /*
     //allows creating alot of generic named items, but idk how to add models or textures to them.
     public ItemGeneric(String name) {
@@ -27,9 +27,11 @@ public class ItemGeneric extends Item implements IBaseComponent {
         setCreativeTab(CreativeTabs.COMBAT);
     }
 */
-public ItemGeneric() {
-    setRegistryName(BasicTest.MODID, "testitem");
-    setTranslationKey(BasicTest.MODID + ".testitem");
+
+
+public ItemSpectralGear() {
+    setRegistryName(BasicTest.MODID, "specgear");
+    setTranslationKey(BasicTest.MODID + ".specgear");
     setCreativeTab(CreativeTabs.MISC);
 }
     @Override
@@ -50,17 +52,18 @@ public ItemGeneric() {
     @Override
     public int getGearQuality(ItemStack is)
     {
-        return 1200;
+        return 60;
     }
     @Override
     public int getGearSpeed(ItemStack is)
     {
-        return 600;
+        return 20;
+        //return ForgeConfigHandler.server.specSpeed //as reference if I want config values
     }
     @Override
     public int getMemoryValue(ItemStack is)//pet peeve, but why isn't it "getGearMemory"? it's shorter!
     {
-        return 500;
+        return 100;
     }
 
     @Override //tooltip to look identical to base mod items

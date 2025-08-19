@@ -1,17 +1,17 @@
 package itemtestagain.handlers;
 
 
+import itemtestagain.item.ItemSpectralGear;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import itemtestagain.BasicTest;
-import itemtestagain.item.ItemGeneric;
 
 @Mod.EventBusSubscriber(modid = BasicTest.MODID)
 public class ModRegistry {
 
-        public static Item exampleItem = new ItemGeneric();
+        public static Item exampleItem = new ItemSpectralGear();
 
         public static void init() {
 
