@@ -8,12 +8,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import itemtestagain.handlers.ModRegistry;
 import itemtestagain.proxy.CommonProxy;
+import itemtestagain.CTRegister;
 
-@Mod(modid = BasicTest.MODID, version = BasicTest.VERSION, name = BasicTest.NAME)
+@Mod(modid = BasicTest.MODID, version = BasicTest.VERSION, name = BasicTest.NAME, dependencies = BasicTest.DEPENDENCIES)
 public class BasicTest {
     public static final String MODID = "itemtestagain";
-    public static final String VERSION = "0.0.2";
+    public static final String VERSION = "0.0.4";
     public static final String NAME = "BasicTest";
+    public static final String DEPENDENCIES = "required-after:clockworkphase;"
+            + "required-after:crafttweaker;"
+            + "required-after:contenttweaker;"
+            + "required-after:base;";
+
     public static final Logger LOGGER = LogManager.getLogger();
 	
     @SidedProxy(clientSide = "itemtestagain.proxy.ClientProxy", serverSide = "itemtestagain.proxy.CommonProxy")
@@ -26,5 +32,6 @@ public class BasicTest {
     public void preInit(FMLPreInitializationEvent event) {
         ModRegistry.init();
         BasicTest.PROXY.preInit();
+        CTRegister.preInit();
     }
 }

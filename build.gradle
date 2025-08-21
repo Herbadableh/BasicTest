@@ -42,6 +42,13 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 	
     implementation fg.deobf("curse.maven:jei-${jei_version}")
+    implementation fg.deobf("curse.maven:clockwork-phase-227388:3016789")
+    implementation("curse.maven:crafttweaker-239197:6821954")
+    implementation("curse.maven:contenttweaker-237065:3331364")
+    implementation("curse.maven:base-246996:3440963")
+    //                                ^part1     ^part2
+    //incase you don't know where to look, part 2 can be found in the URL of the specific file, and
+    //part1 is the projectID
 }
 
 processResources {

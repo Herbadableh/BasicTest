@@ -20,9 +20,14 @@ public class ForgeConfigHandler {
 
 	public static class ServerConfig {
 
+		/*
 		@Config.Comment("Example server side config option")
 		@Config.Name("Example Server Option")
 		public boolean exampleServerOption = true;
+		@Config.Comment("Spectral Gear Stats")
+		@Config.Name("Speed")
+		public int specSpeed = 600;
+		*/
 	}
 
 	public static class ClientConfig {
