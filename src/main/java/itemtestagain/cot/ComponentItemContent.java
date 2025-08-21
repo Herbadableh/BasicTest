@@ -27,20 +27,20 @@ public class ComponentItemContent extends ItemContent implements IBaseComponent 
 
     @Override
     public int getGearSpeed(ItemStack is){
-        if(GearSpeed != 0) {
-            return GearSpeed;
+        if(this.GearSpeed != 0) {
+            return this.GearSpeed;
         }else return 0;
     }
     @Override
     public int getGearQuality(ItemStack is){
-        if(GearQuality != 0) {
-            return GearQuality;
+        if(this.GearQuality != 0) {
+            return this.GearQuality;
         }else return 0;
     }
     @Override
     public int getMemoryValue(ItemStack is){
-        if(GearMemory != 0) {
-            return GearMemory;
+        if(this.GearMemory != 0) {
+            return this.GearMemory;
         }else return 0;
     }
 
@@ -59,14 +59,14 @@ public class ComponentItemContent extends ItemContent implements IBaseComponent 
 
     @Override //tooltip to look identical to base mod items
     public void addInformation(ItemStack item, @Nullable World w, List<String> tooltip, ITooltipFlag ugh) {
-        if(GearQuality != 0) {
-            tooltip.add("Quality: " + "§e" + GearQuality);
+        if(this.GearQuality != 0) {
+            tooltip.add("Quality: " + "§e" + this.GearQuality);
         }
-        if(GearSpeed != 0) {
-        tooltip.add("Speed: " + "§e" + GearSpeed);
+        if(this.GearSpeed != 0) {
+        tooltip.add("Speed: " + "§e" + this.GearSpeed);
         }
-        if(GearMemory != 0) {
-            tooltip.add("Memory: " + "§e" + GearMemory);
+        if(this.GearMemory != 0) {
+            tooltip.add("Memory: " + "§e" + this.GearMemory);
         }
         super.addInformation(item, w, tooltip, ugh);
     }
