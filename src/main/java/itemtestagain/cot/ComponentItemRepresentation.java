@@ -3,11 +3,12 @@ package itemtestagain.cot;
 import com.teamacronymcoders.base.registrysystem.ItemRegistry;
 import com.teamacronymcoders.contenttweaker.ContentTweaker;
 import com.teamacronymcoders.contenttweaker.modules.vanilla.items.ItemRepresentation;
+import crafttweaker.annotations.ZenRegister;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenProperty;
-import itemtestagain.CTRegister;
 
-@ZenClass(CTRegister.CT_PACKAGE + "cot.ComponentItem")
+@ZenRegister
+@ZenClass("mods.itemtestagain.cot.ComponentItem")
 public class ComponentItemRepresentation extends ItemRepresentation{
 
     final int gearQuality;

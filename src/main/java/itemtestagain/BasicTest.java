@@ -8,7 +8,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import itemtestagain.handlers.ModRegistry;
 import itemtestagain.proxy.CommonProxy;
-import itemtestagain.CTRegister;
 
 @Mod(modid = BasicTest.MODID, version = BasicTest.VERSION, name = BasicTest.NAME, dependencies = BasicTest.DEPENDENCIES)
 public class BasicTest {
@@ -32,6 +31,5 @@ public class BasicTest {
     public void preInit(FMLPreInitializationEvent event) {
         ModRegistry.init();
         BasicTest.PROXY.preInit();
-        CTRegister.preInit();
     }
 }

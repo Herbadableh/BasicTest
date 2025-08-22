@@ -27,34 +27,28 @@ public class ComponentItemContent extends ItemContent implements IBaseComponent 
 
     @Override
     public int getGearSpeed(ItemStack is){
-        if(this.GearSpeed != 0) {
-            return this.GearSpeed;
-        }else return 0;
+            return GearSpeed;
     }
     @Override
     public int getGearQuality(ItemStack is){
-        if(this.GearQuality != 0) {
-            return this.GearQuality;
-        }else return 0;
+            return GearQuality;
     }
     @Override
     public int getMemoryValue(ItemStack is){
-        if(this.GearMemory != 0) {
-            return this.GearMemory;
-        }else return 0;
+            return GearMemory;
     }
 
     @Override
     public boolean isComponentSpeedy(ItemStack is){
-        return false;
+        return true;
     }
     @Override
     public boolean isComponentQuality(ItemStack is){
-        return false;
+        return true;
     }
     @Override
     public boolean isComponentMemory(ItemStack is){
-        return false;
+        return true;
     }
 
     @Override //tooltip to look identical to base mod items
