@@ -5,6 +5,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.item.Item;
 import itemtestagain.ModItems;
+import itemtestagain.ModBlocks;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -27,7 +28,7 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
-        //ModBlocks.initModels();
+        ModBlocks.initModels();
         ModItems.initModels();
     }
 }
