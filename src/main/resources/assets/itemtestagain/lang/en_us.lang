@@ -1,2 +1,5 @@
 #items
 item.itemtestagain.specgear.name=Spectral Gear
+
+#in-game messages
+message.itemtestagain.counter_par=Counter: %d
