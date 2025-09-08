@@ -34,7 +34,7 @@ public class BlockTest extends Block implements ITileEntityProvider {
         super(Material.ROCK);
         setRegistryName(BasicTest.MODID, "testblock");
         setTranslationKey(BasicTest.MODID + ".testblock");
-        setCreativeTab(CreativeTabs.MISC);    // The unique name (within your mod) that identifies this block
+        setCreativeTab(CreativeTabs.MISC);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -50,6 +50,7 @@ public class BlockTest extends Block implements ITileEntityProvider {
     private TestTileEntity getTE(World world, BlockPos pos) {
         return (TestTileEntity) world.getTileEntity(pos);
     }
+    /*
     @Override//when right-clicked
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
                                     EnumFacing side, float hitX, float hitY, float hitZ) {
@@ -72,6 +73,10 @@ public class BlockTest extends Block implements ITileEntityProvider {
         // a block on the client
         return true;
     }
+    */
+
+
+
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         world.setBlockState(pos, state.withProperty(FACING, getFacingFromEntity(pos, placer)), 2);
