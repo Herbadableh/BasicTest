@@ -23,24 +23,7 @@ public class TestTileEntity extends TileEntity implements ITickable{
 
     //private final EnumFacing front = world.getBlockState(pos).getValue(BlockTest.FACING);
     //ends up becoming null when first placed in world, cannot load
-    //you have to put it in individual functions, not as single variable
-
-
-
-
-    /*public int decrement() {
-        counter--;
-        markDirty();//marks something to save to disk
-        return counter;
-    }
-
-    public int increment() {
-        counter++;
-        markDirty();
-        return counter;
-    }
-    */
-
+    //you have to put it in individual functions, not as a single variable
 
     @Override
     public void update() {
@@ -50,16 +33,27 @@ public class TestTileEntity extends TileEntity implements ITickable{
             wait--;
             if(wait <= 0)
             {wait = 20;//timer reset
+                markDirty();
                 EnumFacing front = world.getBlockState(pos).getValue(BlockTest.FACING);
                     TileEntity te = world.getTileEntity(pos.offset(front));//tile entity directly infront of the machine
-                    if (te instanceof ITimeSandTile) {
-                        //either the amount of space left in the tank, or how much sand is in the machine, whichever is smaller.
-                        int sandPile = Math.min((tank.getCapacity() - tank.getFluidAmount()), ((ITimeSandTile) te).getTimeSand());
-                        if ((tank.getFluid() == null || tank.getFluid().getFluid() == timeSand) && sandPile >= 0)//if the tank is empty or has time sand and isn't full:
-                        {
-                            int sandIn = ((ITimeSandTile) te).removeTimeSand(sandPile);//checked the code, time sand IS equal to mB.
-                            FluidStack sand = new FluidStack(timeSand, sandIn);
-                            tank.fillInternal(sand, true);
+                    if (te instanceof ITimeSandTile) {//if the tile has timesand
+                        if (tank.getFluid() == null || tank.getFluid().getFluid() == timeSand) {//if empty or has time sand
+                            if (world.isBlockPowered(pos)) { //if this machine has a redstone signal
+                                int sandPileR = Math.min((((ITimeSandTile) te).getMaxTimeSandCapacity() - ((ITimeSandTile) te).getTimeSand()), tank.getFluidAmount());
+                                if(sandPileR > 0){//if there is sand to move and (attached)machine isn't full:
+                                    tank.drainInternal(sandPileR, true);
+                                    ((ITimeSandTile) te).addTimeSand(sandPileR);
+                                }
+                            } else {
+                                //either the amount of space left in the tank, or how much sand is in the machine, whichever is smaller.
+                                int sandPile = Math.min((tank.getCapacity() - tank.getFluidAmount()), ((ITimeSandTile) te).getTimeSand());
+                                if (sandPile > 0)//if there is sand to move and the tank isn't full:
+                                {
+                                    int sandIn = ((ITimeSandTile) te).removeTimeSand(sandPile);//checked the code, time sand IS equal to mB.
+                                    FluidStack sand = new FluidStack(timeSand, sandIn);
+                                    tank.fillInternal(sand, true);
+                                }
+                            }
                         }
                     }
             }
